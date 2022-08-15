@@ -3,10 +3,11 @@
 //PART 1
 
 const BASE_URL = "http://numbersapi.com/";
+const FAVE_NUM = 100;
 
 async function getFavoriteNumber() {
   const response = await axios({
-    url: `${BASE_URL}100?json`,
+    url: `${BASE_URL}${FAVE_NUM}?json`,
     method: "GET",
   });
 
@@ -25,9 +26,11 @@ addFavNumToPage();
 
 //PART 2
 
+const FAV_NUMS = [11, 12, 13, 14];
+
 async function getAllFavoriteNumbers() {
   const response = await axios({
-    url: `${BASE_URL}11,12,13,14?json`,
+    url: `${BASE_URL}${FAV_NUMS}?json`,
     method: "GET",
   });
 
